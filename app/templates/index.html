@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Daniel Mendez</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.css">
+	<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+	<link rel="stylesheet" href="static/css/helpers.css">
+	<link rel="stylesheet" type="text/css" href="static/css/fade-in.css">
+<!-- 	<link rel="stylesheet" type="text/css" href="static/css/animate.css"> -->
+	<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+
+
+</head>
+
+<style>
+	html,body {
+		background:#F7EDE2;
+		margin: 0;
+		height: 100%;
+	}
+
+</style>
+
+<body>
+	{% include 'nav.html' %}
+<!--   		<div class="container"> -->
+    {% block body %}{% endblock %}
+
+    <script type="text/javascript">
+    	(function() {
+    		var burger = document.querySelector('.burger');
+    		var nav = document.querySelector('#'+burger.dataset.target);
+
+    		burger.addEventListener('click', function(){
+    			burger.classList.toggle('is-active');
+    			nav.classList.toggle('is-active');
+    		});
+    	})()
+    </script>
+
+
+
+</body>
+</html>
+

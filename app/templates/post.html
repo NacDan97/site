@@ -1,0 +1,16 @@
+{% extends 'index.html' %}
+
+{% block body %}
+
+<article>
+	
+        <div class="container" style="margin-top: 0px; line-height: 25px">
+            <div class="box fade-in one">
+                <h1>{{ post.title }}</h1>
+                <hr>
+                <div>{{ post.body | safe }}</div>
+            </div>
+        </div>
+</article>
+
+{% endblock %}  
